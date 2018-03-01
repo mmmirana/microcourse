@@ -1,0 +1,41 @@
+.mc-portrait-bg {
+    background: -webkit-linear-gradient(top, #7fcef7, 18%, #bcddff, 66.66%, #fbfbfb);
+    background: -o-linear-gradient(bottom, #7fcef7, 18%, #bcddff, 66.66%, #fbfbfb);
+    background: -moz-linear-gradient(bottom, #7fcef7, 18%, #bcddff, 66.66%, #fbfbfb);
+    background: linear-gradient(to bottom, #7fcef7, 18%, #bcddff, 66.66%, #fbfbfb);
+}
+
+.mc-protrait-img {
+    width: 9.6rem;
+    height: 9.6rem;
+    /*background: #f9f9f9;*/
+}
+
+#lrc > li {
+    font-size: 12px;
+}
+
+#lrc > li:hover {
+    background: #e8e6ff;
+}
+
+.mc-divider-sm {
+    height: 5px;
+}
+
+.mc-divider-md {
+    height: 10px;
+}
+
+.mc-divider-lg {
+    height: 15px;
+}
+
+.mc-module.uh-list .uh-list-item {
+    padding: 5px 20px;
+    height: 80px;
+}
+
+.am-list.am-list-static{
+    padding: 5px;
+}

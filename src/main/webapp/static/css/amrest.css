@@ -1,0 +1,83 @@
+/******************** reset amazeui ********************/
+
+.am-header-default {
+	background-color: #7fcef7;
+}
+
+/** amazeui.css 8501 **/
+.am-dropdown-content {
+	min-width: 120px;
+	border-radius: 5px;
+}
+
+/** amazeui.css 8598 **/
+ul.am-dropdown-content>li>a {
+	padding: 6px 16px;
+	color: #6f6f6f;
+}
+
+/** amazeui.css 8607 **/
+ul.am-dropdown-content>li>a:hover, ul.am-dropdown-content>li>a:focus {
+	color: #2695c1;
+}
+
+/** amazeui.css 7365 **/
+.am-thumbnail {
+	margin: 0.5rem 0;
+}
+
+.am-slider .am-slides {
+	text-align: center;
+}
+
+.am-slider .am-slides img {
+	width: auto;
+	display: inline;
+}
+
+.am-slider-desc {
+	text-align: left;
+}
+
+/** amazeui.css 704 **/
+[class*="am-u-"]+[class*="am-u-"]:last-child {
+	float: left;
+}
+
+.am-panel {
+	border: none; 
+	font-size: 12px;
+}
+
+.am-panel .am-thumbnail img {
+	width: 150px;
+	height: 120px;
+}
+
+.am-panel .am-panel-hd {
+	font-size: 15px;
+}
+
+.vjs-texttrack-settings {
+	display: none;
+}
+
+.vjs-text-track-display div {
+	
+}
+
+/* Change all text and icon colors in the player. */
+.vjs-matrix.video-js {
+	color: #7fcef7;
+}
+
+/* Change the border of the big play button. */
+.vjs-matrix .vjs-big-play-button {
+	border-color: #7fcef7;
+}
+
+/* Change the color of various "bars". */
+.vjs-matrix .vjs-volume-level, .vjs-matrix .vjs-play-progress,
+	.vjs-matrix .vjs-slider-bar {
+	background: #7fcef7;
+}

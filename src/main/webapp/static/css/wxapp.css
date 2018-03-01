@@ -1,0 +1,711 @@
+/************************ 个人主页布局 ************************/
+
+/* 主页 */
+.homepage {
+	background: #f6f6f6;
+}
+
+/* 头像背景+头像内容 */
+.avatar-wrapper {
+	color: dodgerblue;
+	letter-spacing: 1px;
+	min-height: 150px;
+	max-height: 250px;
+	background: rgba(219, 237, 255, 0.5);
+	position: relative;
+}
+
+.avatar-wrapper .operate {
+	position: absolute;
+	right: 25px;
+	bottom: 20px;
+	font-size: 14px;
+}
+
+/* 头像内容 */
+.avatar-content {
+	position: relative;
+	left: 10%;
+}
+
+/* 头像img */
+.avatar-wrapper img.avatar {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.avatar-wrapper .uh-badge {
+	border-radius: 10px;
+	padding: 1px 10px;
+}
+
+.avatar-wrapper a {
+	color: #0093ff;
+}
+
+.avatar-wrapper a:active {
+	color: #cddc39;
+}
+
+.avatar-wrapper .avatar-seedetails {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+/** 主模块高度 **/
+.uh-primary-cube {
+	min-height: 90px !important;
+}
+
+.uh-primary-cube-column {
+	flex-direction: column;
+}
+
+.uh-primary-cube img {
+	width: 40px;
+	height: 40px;
+}
+
+.uh-primary-cube.uh-primary-cube-column img {
+	width: 36px;
+	height: 36px;
+}
+
+.uh-primary-cube label {
+	margin-left: 10px;
+	letter-spacing: 1px;
+}
+
+.uh-primary-cube.uh-primary-cube-column label {
+	margin: 0px;
+}
+
+/** 副模块高度 **/
+.uh-secondary-cube {
+	padding: 5px 0px;
+	color: #4c4c4c;
+	font-size: 15px;
+}
+
+.uh-secondary-cube [class*=uh-icon-] {
+	display: flex;
+	align-items: center;
+}
+
+.uh-secondary-cube img {
+	margin: 0px 10px;
+	width: 28px;
+	height: 28px;
+}
+
+/************************** 医院主页 **************************/
+.uh-doctorlist-row {
+	height: 85px;
+	padding: 5px 0px;
+	border-bottom: 1px solid #e3e3e3;
+	box-sizing: content-box;
+}
+
+/* 医生图片 */
+.uh-doctorlist-row img {
+	width: 50px;
+	height: 50px;
+}
+
+/* 医生信息 */
+.uh-doctorlist-row .docinfo {
+	flex-direction: column;
+	align-items: flex-start;
+}
+/* 医生信息 医生名称 */
+.uh-doctorlist-row .docname {
+	color: #333;
+	font-size: 14px;
+	margin: 3px 0;
+}
+/* 医生信息 医生职称 */
+.uh-doctorlist-row .docname>.doctitle {
+	color: #55bbff;
+	font-size: 12px;
+}
+
+/* 医生信息 医院名称 科室名称 */
+.uh-doctorlist-row .hospname, .uh-doctorlist-row .deptname {
+	color: #a3a3a3;
+	font-size: 13px;
+}
+
+.uh-doctorlist-row .feeinfo {
+	flex-direction: column;
+	align-items: flex-end;
+	font-size: 11px;
+	padding: 0 10px 0 0;
+}
+
+.uh-doctorlist-row .feeinfo>div {
+	margin: 4px 0px;
+}
+
+.uh-doctorlist-row .feeinfo .reference-fee {
+	color: #b3b3b3;
+}
+
+.uh-docdate .appointment-date {
+	width: auto;
+	border-left: 1px solid #ececec;
+	position: relative;
+}
+
+.uh-docdate .appointment-date:last-child {
+	border-right: 1px solid #ececec;
+}
+
+.uh-docdate .uh-dateitem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #666;
+	margin: 8px 20px;
+}
+
+.uh-docdate .appointment-date:active, .uh-docdate .appointment-date.active
+	{
+	background: #53BAE8;
+}
+
+.uh-docdate .today {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+}
+
+.uh-doctabs .uh-tab {
+	min-height: 50px;
+	font-weight: bold;
+	font-size: 14px;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+/************************** 预约单 **************************/
+.uh-appointmenttabs .uh-tab {
+	min-height: 45px;
+}
+
+.uh-orderstate {
+	float: left;
+	margin-left: 4px;
+}
+
+.uh-orderstate .uh-badge {
+	padding: 0px 10px;
+	font-size: 10px;
+	border-radius: 10px;
+}
+
+/************************** 预约单 **************************/
+.dept-point {
+	position: relative;
+	padding-top: 6px;
+}
+
+.dept-point .dept-avtiveimg {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+}
+
+.uh-carddesc {
+	position: relative;
+}
+
+.toorderdetail {
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
+}
+
+/************************** 医生排班页面 **************************/
+.dept-point.active .dept-avtiveimg {
+	display: inline-block;
+}
+
+.workinfo .uh-grid {
+	color: #55bbff;
+	font-size: 15px;
+}
+
+.workinfo .uh-grid [class*=uh-col] {
+	min-height: 40px;
+}
+
+.workinfo .workdate {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.workinfo .workdate>div {
+	margin: 5px;
+}
+
+/************************** 医生主页 **************************/
+.docintroduce {
+	padding: 5px 20px;
+	font-size: 14px;
+	min-height: 200px;
+}
+
+.docintroduce .title {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.docintroduce .desc {
+	font-size: 14px;
+	color: #666;
+}
+
+.docintroduce .desc.nodata {
+	color: #a9a9a9;
+}
+
+.docevaluate {
+	padding: 5px 20px;
+	font-size: 14px;
+	min-height: 120px;
+	border-bottom: solid 1px #ccc;
+}
+
+.docevaluate .patient {
+	
+}
+
+.docevaluate .patient:before, .docevaluate .patient:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.docevaluate .patient .patientname {
+	float: left;
+}
+
+.docevaluate .patient .patienttime {
+	float: right;
+	font-size: 12px;
+	color: #a9a9a9;
+}
+
+.docevaluate .info {
+	
+}
+
+.docevaluate .info:before, .docevaluate .info:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.docevaluate .info .icon {
+	width: 10%;
+	float: left;
+}
+
+.docevaluate .info .text {
+	width: 90%;
+	float: left;
+}
+
+.docevaluate .text .point {
+	font-size: 14px;
+	color: #666;
+}
+
+.docevaluate .text .evaluation {
+	font-size: 14px;
+	margin: 2px 0px;
+}
+
+.docevaluate .text .desc {
+	font-size: 12px;
+	color: #a9a9a9;
+}
+
+/** 医院主页 **/
+.hospital-banner {
+	color: white;
+	letter-spacing: 1px;
+	min-height: 180px;
+	max-height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hospital-banner .changehosp {
+	position: absolute;
+	top: 15px;
+	right: 0px;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	background: #229dff;
+	border-radius: 20px 0px 0px 20px;
+	padding: 4px 4px 4px 12px;
+}
+
+.hospital-banner .searchwrapper {
+	position: absolute;
+	width: 100%;
+	top: 5px;
+	text-align: center;
+	display: none;
+}
+
+.hospital-banner .hospinfo {
+	padding: 5px 15px;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background: rgba(50, 50, 50, 0.6);
+	font-size: 14px;
+	position: absolute;
+}
+
+/************** 医院列表页面 ****************/
+.hosplist .uh-list-item {
+	padding: 5px 0px;
+}
+
+.hosplist .hospimgwrapper {
+	width: 20%;
+	height: 60px;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.hosplist .hospinfowrapper {
+	width: 70%;
+}
+
+.hosplist .hospimgwrapper .hospimg {
+	width: 100%;
+	height: 100%;
+}
+
+.hosplist .hospname {
+	font-size: 14px;
+	color: #333;
+}
+
+.hosplist .hospaddr {
+	font-size: 13px;
+	color: #a6a6a6;
+}
+
+.hosplist .hosplabel .uh-badge {
+	border: none;
+	border-radius: 0px;
+	color: #28dc9c;
+	background: rgba(223, 239, 228, 0.58);
+}
+
+/************************** 就诊人 **************************/
+.uh-peoplelist-row {
+	height: 80px;
+	padding: 5px 0 0;
+	box-sizing: content-box;
+}
+
+.uh-peoplelist-row img {
+	width: 50px;
+	height: 50px;
+}
+
+.uh-peoplelist-row .docinfo {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.uh-peoplelist-row .docname {
+	color: #333;
+	font-size: 16px;
+	margin: 3px 0;
+}
+
+.uh-peoplelist-row .hospname, .uh-peoplelist-row .deptname {
+	color: #a3a3a3;
+	font-size: 14px;
+}
+
+.uh-peoplelist-row .docname>.doctitle {
+	color: #55bbff;
+	font-size: 12px;
+}
+
+.uh-other-people {
+	font-size: 14px;
+	color: #a3a3a3;
+	font-size: 14px;
+	text-align: center;
+	line-height: 35px;
+	padding-top: 10px;
+}
+
+.uh-none-data {
+	font-size: 14px;
+	color: #a3a3a3;
+	text-align: center;
+	line-height: 35px;
+	padding: 10px;
+}
+
+/************************** 添加就诊人 **************************/
+.uh-people-formrow {
+	display: flex;
+	align-items: center;
+	margin: 0px 15px;
+	min-height: 55px;
+	border-bottom: 1px solid #ececec;
+	position: relative;
+}
+
+.uh-people-formrow .uh-formrow {
+	border: none;
+}
+
+.uh-people-formrow:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.uh-actionsheet-labeldom {
+	width: 100%;
+	padding: 10px 0px;
+}
+
+.uh-actionsheet-btn {
+	border: none;
+	background: #fff;
+	text-align: left;
+	padding: 15px 0px;
+	width: 100%;
+	color: #666;
+}
+
+.uh-cardoperate .uh-badge {
+	padding: 4px 12px;
+	font-size: 14px;
+}
+
+/** 微课首页 **/
+.homebannerSwiper {
+	height: 170px;
+}
+
+.homebannerSwiper .swiper-slide img.default {
+	height: 100%;
+	width: auto;
+}
+
+.homebannerSwiper .swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+
+/************************** 检验报告、处方 **************************/
+.uh-btn-container {
+	width: 90%;
+	margin: 0 auto;
+	height: 100%
+}
+
+label.form_label {
+	color: #A0A0A0;
+	font-weight: lighter;
+}
+
+label.form_text {
+	font-weight: normal;
+	display: inline-block;
+	padding-left: 5px;
+}
+
+/************************** 微课首页 **************************/
+.uhhome {
+	padding: 5px 0px;
+}
+
+.uhhome img {
+	width: 24px;
+	height: 24px;
+}
+
+.uhhome label {
+	font-size: 12px;
+}
+/**************************** 医生搜索页 ****************************/
+
+/*搜索框*/
+.uh-searchbox {
+	
+}
+
+.uh-searchbox:before, .uh-searchbox:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/*搜索框 关闭或者返回div*/
+.uh-searchbox .uh-searchclose, .uh-searchbox .uh-searchback {
+	min-width: 30px;
+	float: left;
+}
+
+/*搜索框 input*/
+.uh-searchbox .uh-searchinput {
+	float: left
+}
+
+/** 相对套绝对垂直居中右侧 **/
+.uh-abs-left-center {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+/** 相对套绝对垂直居中右侧 **/
+.uh-abs-right-center {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/******************** 门诊缴费扫码支付 *********************/
+
+/* 清除浮动 */
+.cl {
+	clear: both
+}
+/** 订单相关indexWeixinpay|indexAlipay **/
+div.orderinfo {
+	margin: 0px 15px;
+}
+
+div.orderinfo label {
+	margin: 0px;
+}
+
+div.pay {
+	margin: 50px auto 0px auto;
+	width: 95%;
+}
+
+div.orderinfo .orderitem {
+	min-height: 30px;
+}
+
+div.orderinfo .orderitem:before, div.orderinfo .orderitem:after {
+	clear: both;
+}
+
+div.orderinfo .orderlabel {
+	color: #b9b9b9;
+	font-size: 1.4rem;
+	margin-top: 2px;
+	display: inline;
+}
+
+div.orderinfo .orderdetail {
+	color: #5c5c5c;
+	font-size: 1.5rem;
+	display: inline;
+}
+
+/** 订单项 **/
+div.orderinfo .numberitem {
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed #eaeaea;
+}
+
+/** 诊疗人 **/
+div.orderinfo .name {
+	font-size: 2rem;
+	font-family: monospace;
+	color: #555555;
+	margin: 0 2px;
+	color: #555555;
+}
+
+/** 订单号 **/
+div.orderinfo .number {
+	color: #555555;
+	font-size: 1.4rem
+}
+
+/** 支付金额 **/
+div.orderinfo .orderdetail.orderprice {
+	color: #4cb4f1;
+}
+
+/** 支付状态 **/
+div.orderinfo .orderdetail.orderprice {
+	color: #4cb4f1;
+}
+
+/******************** 支付成功 *********************/
+div.payresult {
+	
+}
+
+div.payresult .info {
+	font-size: 1.8rem;
+	border-bottom: 1px solid #f5f5f5;
+	text-align: center;
+	margin-bottom: 18px;
+	line-height: 150%;
+}
+
+div.payresult .detail {
+	padding: 25px 0px 5px 0px;
+	text-align: center;
+}
+
+div.payresult .detail .successimg {
+	height: 96px;
+}
+
+div.payresult .order {
+	padding: 0px 20px;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+div.payresult .downloadapp {
+	margin: 15px;
+}
+
+div.payresult .downloadapp>div {
+	float: left;
+}
+
+div.payresult .appinfotitle {
+	font-size: 1.5rem;
+}
+
+div.payresult ul.appinfolist>li {
+	font-size: 1.2rem !important;
+}

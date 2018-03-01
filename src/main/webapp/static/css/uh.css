@@ -1,0 +1,803 @@
+/*通用样式*/
+@CHARSET "UTF-8";
+
+/************************ 居中 ************************/
+
+/** 内容水平居中 **/
+.uh-center-h {
+	display: flex;
+	justify-content: center;
+}
+
+/** 内容垂直居中 **/
+.uh-center-v {
+	display: flex;
+	align-items: center;
+}
+
+/** 内容水平垂直居中 **/
+.uh-center-vh {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+/** 内容水平垂直居中后，横向显示 **/
+.uh-center-vh-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+/** 内容水平垂直居中后，纵向显示 **/
+.uh-center-vh-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/************************ 微课按钮 ************************/
+.uh-btn {
+	display: inline-block;
+	margin-bottom: 0;
+	padding: 8px 20px;
+	vertical-align: middle;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: center;
+	white-space: nowrap;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 0;
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: background-color 300ms ease-out, border-color 300ms
+		ease-out;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out;
+}
+
+.uh-btn-block {
+	display: block;
+	width: 100%;
+}
+
+.uh-btn-radius {
+	border-radius: 5px;
+}
+
+.uh-btn-xs {
+	padding: 6px 16px;
+	font-size: 12px;
+}
+
+.uh-btn-sm {
+	padding: 7px 18px;
+	font-size: 14px;
+}
+
+.uh-btn-lg {
+	padding: 9px 22px;
+	font-size: 18px;
+}
+
+.uh-btn-xl {
+	padding: 10px 24px;
+	font-size: 20px;
+}
+
+.uh-btn-default {
+	color: #fff;
+	background: #777;
+	border-color: #777;
+}
+
+.uh-btn-primary {
+	color: #fff;
+	background: #55bbff;
+	border-color: #55bbff;
+}
+
+.uh-btn-default.uh-btn-hollow {
+	color: #777;
+	background: #fff;
+}
+
+.uh-btn-primary.uh-btn-hollow {
+	color: #55bbff;
+	background: #fff;
+}
+
+.uh-btn-default:hover, .uh-btn-default:focus {
+	color: #fff;
+	border-color: #333;
+	background: #333;
+}
+
+.uh-btn-primary:hover, .uh-btn-primary:focus {
+	color: #fff;
+	border-color: #0099ff;
+	background: #0099ff;
+}
+
+.uh-btn-default.uh-btn-hollow:hover, .uh-btn-default.uh-btn-hollow:focus
+	{
+	color: #333;
+	background: #fff;
+	border-color: #333;
+}
+
+.uh-btn-primary:hover, .uh-btn-primary:focus {
+	background: #0099ff;
+	border-color: #0099ff;
+}
+
+.uh-btn-primary.uh-btn-hollow:hover, .uh-btn-primary.uh-btn-hollow:focus
+	{
+	color: #0099ff;
+	background: #fff;
+	border-color: #0099ff;
+}
+
+/************************ btn 按钮组 ************************/
+.uh-btn-group {
+	font-size: 0px;
+}
+
+.uh-btn-group .uh-btn {
+	margin: 0px;
+}
+
+.uh-btn-group>.uh-btn:first-child:not(:last-child ){
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.uh-btn-group>.uh-btn:last-child:not(:first-child ){
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/************************ 微课栅格布局 ************************/
+.uh-grid {
+	background: #fff;
+	box-sizing: border-box;
+}
+
+.uh-row {
+	min-height: 1px;
+}
+
+.uh-col-1 {
+	width: 8.3333%;
+}
+
+.uh-col-2 {
+	width: 16.6667%;
+}
+
+.uh-col-3 {
+	width: 25%;
+}
+
+.uh-col-4 {
+	width: 33.3333%;
+}
+
+.uh-col-5 {
+	width: 41.6667%;
+}
+
+.uh-col-6 {
+	width: 50%;
+}
+
+.uh-col-7 {
+	width: 58.3333%;
+}
+
+.uh-col-8 {
+	width: 66.6667%;
+}
+
+.uh-col-9 {
+	width: 75%;
+}
+
+.uh-col-10 {
+	width: 83.3333%;
+}
+
+.uh-col-11 {
+	width: 91.6667%;
+}
+
+.uh-col-12 {
+	width: 100%;
+}
+
+/** offset **/
+.uh-col-offset-1 {
+	margin-left: 8.3333%;
+}
+
+.uh-col-offset-2 {
+	margin-left: 16.6667%;
+}
+
+.uh-col-offset-3 {
+	margin-left: 25%;
+}
+
+.uh-col-offset-4 {
+	margin-left: 33.3333%;
+}
+
+.uh-col-offset-5 {
+	margin-left: 41.6667%;
+}
+
+.uh-col-offset-6 {
+	margin-left: 50%;
+}
+
+.uh-col-offset-7 {
+	margin-left: 58.3333%;
+}
+
+.uh-col-offset-8 {
+	margin-left: 66.6667%;
+}
+
+.uh-col-offset-9 {
+	margin-left: 75%;
+}
+
+.uh-col-offset-10 {
+	margin-left: 83.3333%;
+}
+
+.uh-col-offset-11 {
+	margin-left: 91.6667%;
+}
+
+.uh-col-offset-12 {
+	margin-left: 100%;
+}
+
+[class*=uh-col-] {
+	float: left;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.uh-col-left[class*=uh-col-] {
+	justify-content: flex-start;
+}
+
+.uh-col-right[class*=uh-col-] {
+	justify-content: flex-end;
+}
+
+[class*=uh-col-]:last-child {
+	/* 	float: right; */
+	
+}
+
+/* 如果需要点击效果 添加 uh-effect class样式 */
+.uh-grid.uh-effect [class*=uh-col-]:active {
+	background: #f3f3f3;
+}
+
+/** grid边框 **/
+.uh-grid.uh-bordered {
+	
+}
+
+.uh-grid.uh-bordered [class*=uh-col-] {
+	border-right: 1px solid #f3f3f3;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.uh-grid.uh-bordered .uh-row:first-child [class*=uh-col-] {
+	border-top: 1px solid #f3f3f3;
+}
+
+.uh-grid.uh-bordered .uh-row [class*=uh-col-]:first-child {
+	border-left: 1px solid #f3f3f3;
+}
+
+.uh-row:after {
+	clear: both;
+}
+
+/************************ 微课列表布局 ************************/
+.uh-list {
+	background: #fff;
+	/*padding: 5px 15px;*/
+}
+
+.uh-list .uh-list-item {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.uh-list.uh-effect .uh-list-item:active {
+	background: #f3f3f3;
+}
+
+.uh-list-item [class*=uh-icon-] {
+	padding: 5px 0px;
+}
+
+.uh-list.uh-bordered .uh-list-item {
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.uh-list.uh-bordered .uh-list-item:last-child {
+	border: none;
+}
+
+.uh-list-item .uh-icon-right {
+	position: absolute;
+	right: 20px;
+	top: 0px;
+	bottom: 0px;
+	display: flex;
+	align-items: center;
+}
+
+.uh-icon-right i {
+}
+
+/************************ 微课面板 ************************/
+.uh-panel {
+	background: #fff;
+	border-top: 1px solid #eaeaea;
+}
+
+.uh-panel .uh-panel-title {
+	color: #55bbff;
+	padding: 5px 15px;
+	background: #F2FBFA;
+	font-size: 14px;
+}
+
+.uh-panel-title:before, .uh-panel-title:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.uh-panel-title .uh-paneltitle-icon {
+	padding-right: 10px;
+}
+
+.uh-panel-title .uh-paneltitle-icon img {
+	width: 20px;
+	height: 20px;
+}
+
+.uh-panel-title .uh-paneltitle-icon, .uh-panel-title .uh-paneltitle-name
+	{
+	float: left;
+}
+
+.uh-panel-title .uh-paneltitle-operate {
+	transition: All 0.2s ease-in-out;
+	transform: rotate(180deg);
+	float: right;
+}
+
+.uh-panel.open .uh-panel-title .uh-paneltitle-operate {
+	transform: rotate(0deg);
+}
+
+.uh-panel .uh-panel-desc {
+	padding: 5px 15px;
+	font-size: 14px;
+}
+
+.uh-panel-badge .uh-badge {
+	background: #F2FBFA !important;
+	border-color: #E0F5F4 !important;
+}
+
+/************************ 微课表单 ************************/
+.uh-form {
+	padding: 10px;
+	background: #fff;
+}
+
+.uh-formrow {
+	display: flex;
+	align-items: center;
+	padding: 0px 10px;
+	min-height: 55px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.uh-form-label {
+	float: left;
+	min-width: 15px;
+	margin-right: 5px;
+}
+
+.uh-form-label i {
+	color: #999;
+}
+
+.uh-form-text {
+	float: left;
+	width: 100%;
+}
+
+.uh-form-text .uh-input {
+	width: 100%;
+	border: none !important;
+	padding: 0px !important;
+}
+
+.uh-form-label25 {
+	float: left;
+	width: 25%;
+}
+
+.uh-form-text75 {
+	float: left;
+	width: 75%;
+}
+
+/** 输入框placeholder颜色 **/
+.uh-form-text .uh-input::-webkit-input-placeholder {
+	color: #bebebe !important;
+	font-size: 14px !important;
+}
+
+/************************ 微课徽章 ************************/
+.uh-badge {
+	padding: 1px 6px;
+	font-size: 12px;
+	border-radius: 4px;
+}
+
+.uh-badge-sm {
+	padding: 1px 4px;
+	font-size: 10px;
+}
+
+.uh-badge-lg {
+	padding: 2px 8px;
+	font-size: 14px;
+}
+
+.uh-badge-xl {
+	padding: 3px 10px;
+	font-size: 14px;
+}
+
+.uh-badge-default {
+	color: #fff;
+	background: #666;
+	border: 1px solid #666;
+}
+
+.uh-badge-primary {
+	color: #fff;
+	background: #55bbff;
+	border: 1px solid #55bbff;
+}
+
+.uh-badge-success {
+	color: #fff;
+	background: #8ee600;
+	border: 1px solid #8ee600;
+}
+
+.uh-badge-warn {
+	color: #fff;
+	background: #ffb54d;
+	border: 1px solid #ffb54d;
+}
+
+.uh-badge-error {
+	color: #fff;
+	background: #ff2620;
+	border: 1px solid #ff2620;
+}
+
+.uh-badge-disable {
+	color: #fff;
+	background: #ccc;
+	border: 1px solid #ccc;
+}
+
+.uh-badge-default.uh-badge-hollow {
+	color: #666;
+	background: transparent;
+	border: 1px solid #666;
+}
+
+.uh-badge-primary.uh-badge-hollow {
+	color: #55bbff;
+	background: transparent;
+	border: 1px solid #55bbff;
+}
+
+.uh-badge-success.uh-badge-hollow {
+	color: #8ee600;
+	background: transparent;
+	border: 1px solid #8ee600;
+}
+
+.uh-badge-warn.uh-badge-hollow {
+	color: #ffb54d;
+	background: transparent;
+	border: 1px solid #ffb54d;
+}
+
+.uh-badge-error.uh-badge-hollow {
+	color: #ff2620;
+	background: transparent;
+	border: 1px solid #ff2620;
+}
+
+.uh-badge-disable.uh-badge-hollow {
+	color: #ccc;
+	background: transparent;
+	border: 1px solid #ccc;
+}
+
+/************************ 微课导航布局 ************************/
+/* 导航条 */
+.uh-nav {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	line-height: 50px;
+	background: #fff;
+	color: #57bbff;
+}
+
+.uh-nav.uh-nav-border {
+	border-bottom: 1px solid #ececec;
+}
+
+/* 导航内容 */
+.uh-nav .uh-nav-content {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+}
+
+/* 导航内容文本 */
+.uh-nav .uh-nav-title {
+	font-size: 18px;
+}
+
+/* 导航内容左边箭头 */
+.uh-nav .uh-nav-arrow {
+	position: absolute;
+	font-size: 28px;
+	top: 0;
+	left: 15px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* 导航内容右边功能区 */
+.uh-nav .uh-nav-operate {
+	position: absolute;
+	font-size: 25px;
+	top: 0;
+	right: 15px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+/************************ 微课Tabs ************************/
+.uh-tabs {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+.uh-tabs .uh-tab {
+	min-height: 40px;
+}
+
+.uh-tabs .uh-tab:active, .uh-tabs .uh-tab.active {
+	color: #57bbff;
+	border-bottom: 2px solid #57bbff;
+}
+
+.uh-swiper {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+/************************ 微课头部、尾部 ************************/
+.uh-header {
+	min-height: 50px;
+	background: #fff;
+	border-bottom: 1px solid #ececec;
+}
+
+.uh-header.uh-header-fixed {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+}
+
+.uh-footer.uh-footer-fixed {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	z-index: 100;
+}
+
+.uh-body {
+	/* 	height: 800px; */
+	
+}
+
+.uh-body.uh-header-fixed {
+	padding-top: 50px;
+	top: 0px;
+}
+
+.uh-body.uh-footer-fixed {
+	padding-bottom: 50px;
+	bottom: 0px;
+}
+
+.uh-footer {
+	min-height: 50px;
+	background: #fff;
+	border-top: 1px solid #ececec;
+}
+/************************ card ************************/
+.uh-card {
+	background: #fff;
+	padding: 20px;
+	margin: 8px 8px 0px 8px;
+}
+
+.uh-card.uh-cardfull {
+	margin: 8px 0px 0px 0px;
+}
+
+.uh-card .uh-cardtitle {
+	padding: 8px 0px 6px 0px;
+}
+
+.uh-card .uh-cardtitle:before, .uh-card .uh-cardtitle:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.uh-cardtitle .uh-cardtitle-name {
+	font-size: 14px;
+	float: left;
+}
+
+.uh-cardtitle .uh-cardtitle-text {
+	font-size: 14px;
+	float: right;
+}
+
+.uh-cardtitle .uh-cardtitle-sm {
+	font-size: 12px;
+	color: #bbb;
+}
+
+.uh-carddesc {
+	border-top: 1px solid #f3f3f3;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.uh-carddesc .uh-carddesc-row {
+	position: relative;
+}
+
+.uh-carddesc-row .uh-badge {
+	position: absolute;
+	right: 0px;
+	top: 5px;
+}
+
+.uh-carddesc .uh-carddesc-name {
+	font-size: 12px;
+	color: #bbb;
+}
+
+.uh-carddesc .uh-carddesc-text {
+	font-size: 13px;
+}
+
+.uh-carddesc .uh-cardcenter {
+	font-size: 12px;
+	color: #bbb;
+	text-align: center;
+}
+
+.uh-cardoperate {
+	padding: 8px 0px;
+	text-align: right;
+}
+
+.uh-cardoperate .uh-btn {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+/************************ 列表清除浮动 ************************/
+.uh-nav-content:before, .uh-nav-content:after, .uh-formrow:before,
+	.uh-formrow:after, .uh-row:before, .uh-row:after, .uh-list-item:before,
+	.uh-list-item:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/************************ scroll ************************/
+.uhscroll {
+	position: relative;
+	overflow: hidden;
+	-ms-touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/*****************************************************/
+.nodata-center {
+	text-align: center;
+	color: #ccc;
+	margin: 10px auto;
+	font-size: 14px;
+}
+
+.nodata-left {
+	color: #ccc;
+	margin: 10px;
+	font-size: 14px;
+}
+
+.resource-state {
+	width: 200px;
+}
+/**************医生号源页温馨提示***************************************/
+.textarea-daydesc {
+	border: none;
+	width: 100%;
+	padding: 15px;
+	min-height: 150px;
+	max-height: 300px;
+	font-size: 14px;
+}

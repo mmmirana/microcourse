@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- 注解配置 -->
+    <context:annotation-config/>
+
+    <!-- 使用annotation 自动注册bean,并检查@Required,@Autowired的属性已被注入base-package为需要扫描的包（含所有子包） -->
+    <context:component-scan base-package="com.mirana.**">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- 读取多属性文件 -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <!-- spring.xml配置dbutils数据源使用 -->
+                <value>classpath:config/database/jdbc.properties</value>
+                <!-- springredis.xml需要加载 -->
+                <value>classpath:config/database/redis.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <!-- 基本信息 -->
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 其他配置 -->
+        <!--初始化时获取三个连接，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+        <property name="initialPoolSize" value="3"/>
+        <!--连接池中保留的最小连接数。Default: 5 -->
+        <property name="minPoolSize" value="3"/>
+        <!--连接池中保留的最大连接数。Default: 15 -->
+        <property name="maxPoolSize" value="30"/>
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+        <property name="acquireIncrement" value="3"/>
+        <!-- 控制数据源内加载的PreparedStatements数量。如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0 -->
+        <property name="maxStatements" value="8"/>
+        <!-- maxStatementsPerConnection定义了连接池内单个连接所拥有的最大缓存statements数。Default: 0 -->
+        <property name="maxStatementsPerConnection" value="5"/>
+        <!--最大空闲时间,1800秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+        <property name="maxIdleTime" value="1800"/>
+    </bean>
+
+    <!-- 对数据源进行代理 -->
+    <bean id="proxyDataSource" class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+        <constructor-arg>
+            <ref bean="dataSource"/>
+        </constructor-arg>
+    </bean>
+
+    <!-- dbutilsTemplate -->
+    <bean name="dbutilsTemplate" class="com.mirana.frame.db.dbutilsplus.dbtemplate.DBUtilsTemplate">
+        <property name="dataSource" ref="proxyDataSource"/>
+    </bean>
+
+    <!-- 配置事务管理器 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="proxyDataSource"/>
+    </bean>
+
+    <!-- 配置注解事务 -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+    <!-- 配置Aop声明式事务 -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <!-- 默认所有的方法都开启事务 -->
+            <tx:method name="*" rollback-for="RuntimeException"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- Spring AOP config -->
+    <aop:config>
+        <!-- 切入点 -->
+        <aop:pointcut id="txPointcut" expression="execution(* com.mirana..*.service.*Impl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+    <!-- =============================================================================== -->
+
+    <!-- spring application context -->
+    <bean id="springCtxUtils" class="com.mirana.frame.spring.SpringCtxUtils"/>
+
+    <!-- spring application context -->
+    <bean id="springReady" class="com.mirana.frame.spring.SpringReady" init-method="init"/>
+
+    <!-- =============================================================================== -->
+
+    <!-- 引入sspringquartz.xml，使用quartz -->
+    <import resource="classpath:config/spring/springquartz.xml"/>
+
+    <!-- 引入springredis.xml，使用redis -->
+    <import resource="classpath:config/spring/springredis.xml"/>
+
+</beans>

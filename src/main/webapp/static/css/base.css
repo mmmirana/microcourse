@@ -1,0 +1,448 @@
+/* 基准样式 */
+@CHARSET "UTF-8";
+
+/************************ all ************************/
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: #fff;
+	font-family: '微软雅黑';
+	margin: auto;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+/************************ a ************************/
+a, a:hover, a:active {
+	color: #666;
+	text-decoration: none;
+}
+
+a.blue, a.blue:hover, a.blue:active {
+	color: #55bbff;
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	margin: 0px;
+	font-weight: normal;
+}
+
+.clear:before, .clear:after, .clearfix:before, .clearfix:after,
+	.clearfloat:before, .clearfloat:after {
+	clear: both;
+}
+
+/* 段落 */
+.paragraph {
+	text-indent: 2em;
+}
+
+/************************ text ************************/
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+/* 超出一行...显示 */
+.text-ellipsis {
+	word-wrap: normal !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}
+/************************ font ************************/
+.fontsize-xxl {
+	font-size: 22px !important;
+}
+
+.fontsize-xl {
+	font-size: 20px !important;
+}
+
+.fontsize-lg {
+	font-size: 18px !important;
+}
+
+.fontsize-md {
+	font-size: 16px !important;
+}
+
+.fontsize-sm {
+	font-size: 14px !important;
+}
+
+.fontsize-xs {
+	font-size: 12px !important;
+}
+
+.fontsize-xxs {
+	font-size: 10px !important;
+}
+
+/************************ color ************************/
+.color-default {
+	color: #666 !important;
+}
+
+.color-primary {
+	color: #55bbff !important;
+}
+
+.color-success {
+	color: #8ee600 !important;
+}
+
+.color-warn {
+	color: #fcbd22 !important;
+}
+
+.color-error {
+	color: #ff2620 !important;
+}
+
+.color-disable {
+	color: #ccc;
+}
+
+.color-gray {
+	color: gray;
+}
+
+/************************ bgcolor ************************/
+
+/** 默认色调 **/
+.bg-default {
+	background: #f7f7f7 !important;
+}
+
+/** 主色调 **/
+.bg-primary {
+	
+}
+
+/** 次色调 **/
+.bg-secondary {
+	
+}
+
+/** 成功 **/
+.bg-success {
+	
+}
+
+/** 警告 **/
+.bg-warn {
+	
+}
+
+/** 错误 **/
+.bg-error {
+	background: #fa7070 !important;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+/************************ margin ************************/
+.margin-none {
+	padding: 0px !important;
+}
+
+.margin-xs {
+	margin: 2px !important;
+}
+
+.margin-sm {
+	margin: 4px !important;
+}
+
+.margin-md {
+	margin: 6px !important;
+}
+
+.margin-lg {
+	margin: 8px !important;
+}
+
+.margin-xl {
+	margin: 10px !important;
+}
+
+/* top */
+.margin-top-none {
+	margin-top: 0px !important;
+}
+
+.margin-top-xs {
+	margin-top: 2px !important;
+}
+
+.margin-top-sm {
+	margin-top: 4px !important;
+}
+
+.margin-top-md {
+	margin-top: 6px !important;
+}
+
+.margin-top-lg {
+	margin-top: 8px !important;
+}
+
+.margin-top-xl {
+	margin-top: 10px !important;
+}
+
+/* right */
+.margin-right-none {
+	margin-right: 0px !important;
+}
+
+.margin-right-xs {
+	margin-right: 2px !important;
+}
+
+.margin-right-sm {
+	margin-right: 4px !important;
+}
+
+.margin-right-md {
+	margin-right: 6px !important;
+}
+
+.margin-right-lg {
+	margin-right: 8px !important;
+}
+
+.margin-right-xl {
+	margin-right: 10px !important;
+}
+
+/* bottom */
+.margin-bottom-none {
+	margin-bottom: 0px !important;
+}
+
+.margin-bottom-xs {
+	margin-bottom: 2px !important;
+}
+
+.margin-bottom-sm {
+	margin-bottom: 4px !important;
+}
+
+.margin-bottom-md {
+	margin-bottom: 6px !important;
+}
+
+.margin-bottom-lg {
+	margin-bottom: 8px !important;
+}
+
+.margin-bottom-xl {
+	margin-bottom: 10px !important;
+}
+
+/* left */
+.margin-left-none {
+	margin-left: 0px !important;
+}
+
+.margin-left-xs {
+	margin-left: 2px !important;
+}
+
+.margin-left-sm {
+	margin-left: 4px !important;
+}
+
+.margin-left-md {
+	margin-left: 6px !important;
+}
+
+.margin-left-lg {
+	margin-left: 8px !important;
+}
+
+.margin-left-xl {
+	margin-left: 10px !important;
+}
+
+/************************ padding ************************/
+.padding-none {
+	padding: 0px !important;
+}
+
+.padding-xs {
+	padding: 2px !important;
+}
+
+.padding-sm {
+	padding: 4px !important;
+}
+
+.padding-md {
+	padding: 6px !important;
+}
+
+.padding-lg {
+	padding: 8px !important;
+}
+
+.padding-xl {
+	padding: 10px !important;
+}
+
+/* top */
+.padding-top-none {
+	padding-top: 0px !important;
+}
+
+.padding-top-xs {
+	padding-top: 2px !important;
+}
+
+.padding-top-sm {
+	padding-top: 4px !important;
+}
+
+.padding-top-md {
+	padding-top: 6px !important;
+}
+
+.padding-top-lg {
+	padding-top: 8px !important;
+}
+
+.padding-top-xl {
+	padding-top: 10px !important;
+}
+
+/* right */
+.padding-right-none {
+	padding-right: 0px !important;
+}
+
+.padding-right-xs {
+	padding-right: 2px !important;
+}
+
+.padding-right-sm {
+	padding-right: 4px !important;
+}
+
+.padding-right-md {
+	padding-right: 6px !important;
+}
+
+.padding-right-lg {
+	padding-right: 8px !important;
+}
+
+.padding-right-xl {
+	padding-right: 10px !important;
+}
+
+/* bottom */
+.padding-bottom-none {
+	padding-bottom: 0px !important;
+}
+
+.padding-bottom-xs {
+	padding-bottom: 2px !important;
+}
+
+.padding-bottom-sm {
+	padding-bottom: 4px !important;
+}
+
+.padding-bottom-md {
+	padding-bottom: 6px !important;
+}
+
+.padding-bottom-lg {
+	padding-bottom: 8px !important;
+}
+
+.padding-bottom-xl {
+	padding-bottom: 10px !important;
+}
+
+/* left */
+.padding-left-none {
+	padding-left: 0px !important;
+}
+
+.padding-left-xs {
+	padding-left: 2px !important;
+}
+
+.padding-left-sm {
+	padding-left: 4px !important;
+}
+
+.padding-left-md {
+	padding-left: 6px !important;
+}
+
+.padding-left-lg {
+	padding-left: 8px !important;
+}
+
+.padding-left-xl {
+	padding-left: 10px !important;
+}
+
+/************************ border ************************/
+.border-none {
+	border: none !important;
+}
+
+.border-top-none {
+	border-top: none !important;
+}
+
+.border-right-none {
+	border-right: none !important;
+}
+
+.border-bottom-none {
+	border-bottom: none !important;
+}
+
+.border-left-none {
+	border-left: none;
+}
+
+/************************ 效果 ************************/
+.full {
+	width: 100%;
+	height: 100%;
+}
+
+.hide {
+	display: none;
+}
