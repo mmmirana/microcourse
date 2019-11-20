@@ -58,7 +58,7 @@
         <!-- mysql connector版本号 -->
         <mysql.version>5.1.38</mysql.version>
         <!--c3p0-->
-        <c3p0.version>0.9.5.2</c3p0.version>
+        <c3p0.version>0.9.5.4</c3p0.version>
         <!--dbcp-->
         <dbcp.version>1.4</dbcp.version>
 
