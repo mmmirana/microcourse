@@ -76,7 +76,7 @@
         <!-- dbutils -->
         <commons-dbutils.version>1.6</commons-dbutils.version>
         <!-- httpclient -->
-        <httpclient.version>4.3.4</httpclient.version>
+        <httpclient.version>4.5.10</httpclient.version>
 
         <!-- druid.version -->
         <druid.version>1.0.29</druid.version>
