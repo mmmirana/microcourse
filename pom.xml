@@ -56,7 +56,7 @@
         <log4j.version>1.2.17</log4j.version>
 
         <!-- mysql connector版本号 -->
-        <mysql.version>5.1.38</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <!--c3p0-->
         <c3p0.version>0.9.5.2</c3p0.version>
         <!--dbcp-->
